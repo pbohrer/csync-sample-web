@@ -1,9 +1,7 @@
-<button ng-click="postTimestamp()">Set Timestamp</button>
-<button ng-click="reloadTimestamps()">Reload Timestamps</button>
-<button ng-click="clearTimestamps()">Clear Timestamps</button>
-<div ng-show="items.length == 0"><h2>No timestamps to show</h2></div>
-<div ng-show="items.length > 0">
+<h1>Chat Rooms</h1>
+<div ng-repeat="(key, value) in tree.rooms" ng-if="!key.startsWith('_')">
+	<h2>Room: {{value._data}} ({{value._key}}):</h2>
 	<ul>
-		<li ng-repeat="item in items track by $index">{{item}}</li>
+		<li ng-repeat="(key2, value2) in value" ng-if="!key2.startsWith('_')">{{value2._data.timestamp | date : 'medium'}} ({{value2._data.creatorName}}): <b>{{value2._data.message}}</b></li>
 	</ul>
 </div>

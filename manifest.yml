@@ -1,4 +1,4 @@
 applications:
-- name: kitura-angular
+- name: kitura-angular-csync-demo
   memory: 512M
   instances: 1

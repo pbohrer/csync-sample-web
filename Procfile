@@ -1,1 +1,1 @@
-web: kitura-angular
+web: kitura-angular-csync-demo
