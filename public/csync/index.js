@@ -1,0 +1,1 @@
+global.csync = require('csync');
